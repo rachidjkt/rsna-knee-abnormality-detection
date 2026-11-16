@@ -1,0 +1,17 @@
+{
+  "data_dir": "outputs/synthetic_data",
+  "image_root": "outputs/synthetic_data/train_images",
+  "output_dir": "outputs/synthetic_cpu",
+  "split_path": "outputs/synthetic_split.json",
+  "encoder": "tiny",
+  "slices_per_series": 2,
+  "image_size": 48,
+  "strategy": "uniform",
+  "seed": 42,
+  "epochs": 2,
+  "batch_size": 4,
+  "learning_rate": 0.001,
+  "device": "cpu",
+  "cache_dir": "outputs/synthetic_cache",
+  "synthetic": true
+}

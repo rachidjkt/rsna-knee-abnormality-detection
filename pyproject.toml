@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rsna-knee-ai"
+version = "0.1.0"
+description = "Reproducible study-level knee MRI classification and slice-selection experiments"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.3,<3", "torchvision>=0.18,<1", "numpy>=1.26,<3", "pandas>=2.2,<4", "scikit-learn>=1.4,<2", "pydicom>=3.0,<4", "Pillow>=10,<13"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "matplotlib>=3.8,<4", "nbformat>=5.10,<6", "nbclient>=0.10,<1", "ipykernel>=6,<8"]
+dicom = ["pylibjpeg>=2,<3", "pylibjpeg-libjpeg>=2,<3", "pylibjpeg-openjpeg>=2,<3", "pylibjpeg-rle>=2,<3", "pyjpegls>=1.5,<2"]
+
+[project.scripts]
+knee-ai = "knee_ai.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"

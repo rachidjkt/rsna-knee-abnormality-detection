@@ -1,0 +1,17 @@
+{
+  "data_dir": "outputs/synthetic_data",
+  "image_root": "outputs/synthetic_data/train_images",
+  "output_dir": "outputs/synthetic_gpu_resnet18",
+  "split_path": "outputs/synthetic_split.json",
+  "encoder": "resnet18",
+  "slices_per_series": 2,
+  "image_size": 64,
+  "strategy": "uniform",
+  "seed": 42,
+  "epochs": 1,
+  "batch_size": 2,
+  "device": "cuda",
+  "amp": true,
+  "cache_dir": "outputs/synthetic_cache",
+  "synthetic": true
+}

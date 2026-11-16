@@ -1,0 +1,9 @@
+# Decode-only dependencies for Kaggle's existing NumPy 1.26.4, Python 3.10–3.12.
+# Build Linux wheels with scripts/prepare_kaggle_wheels.py; do not pip-install this
+# file into Kaggle's base environment. Bootstrap installs verified wheels --no-deps.
+pydicom==3.0.2
+pylibjpeg==2.1.0
+pylibjpeg-libjpeg==2.1.0
+pylibjpeg-openjpeg==2.2.1
+# JPEG-LS decoding uses libjpeg; RLE decoding uses pydicom's native plugin.
+# pyjpegls is only needed by the local JPEG-LS fixture encoder, not Kaggle inference.

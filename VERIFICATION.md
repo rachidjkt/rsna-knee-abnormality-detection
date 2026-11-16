@@ -1,0 +1,14 @@
+﻿# Verification: 2026-11-16
+
+Executed on the prepared source with the existing Windows Python 3.12 RSNA environment. No dependency download, MRI archive download, full-model training, Kaggle job, or submission was launched.
+
+- `python -m pytest -q -p no:cacheprovider --basetemp outputs/portfolio_tests_run2`: **54 passed, 45 skipped**. This includes synthetic DICOM codecs, split/group leakage guards, missing-label masking, partial supervision, training/checkpoint behavior, inference validation, and embedded-notebook source/format checks.
+- Skips: optional official metadata (1), pretrained weights (1), prepared wheelhouse checks (2), and local-only dual-NumPy/Linux codec bundle regression cases (41). These assets are intentionally not distributed. Skips are not passes.
+- `python scripts/smoke.py --output outputs/portfolio_smoke --device cpu`: **passed**, two tiny-model epochs, nine synthetic training studies, three synthetic validation studies, checkpoint reload, and three synthetic test predictions. Measured training 3.5102391000 seconds and inference 0.7558978000 seconds are machine-specific smoke observations, not a performance benchmark. No synthetic AUC is promoted as medical performance.
+- `python scripts/verify_notebooks.py --data-dir outputs/portfolio_smoke/data --output outputs/portfolio_notebooks`: **all four notebooks executed successfully** on synthetic DICOMs with socket networking blocked. Training, inference, matched sampler comparison, and checkpoint-reload smoke cells ran; this used the tiny encoder and local CUDA, not real MRI training. The source hash matched `a36c38a5b3738b8df9368360c479838a0f81271d54dca6daa08c6c44690adc9c`. Full remote Kaggle execution and current Linux wheel installation remain unverified.
+- `python -m pip check` passed in the existing environment. This does not replace a fresh installation test.
+- Final staged-content inspection caught a source-packaging issue: unanchored `data/` also ignored `src/knee_ai/data/`. The rule is now `/data/`, preserving exclusion of competition data while including all five source modules. Every package Python file was checked against the Git index.
+
+A first test attempt exposed a missing temporary-output parent and unavailable local asset assumptions. The output parent was created, optional bundle tests now explicitly skip without their inputs, and the no-partial-label preservation check now uses synthetic fixtures. The successful rerun used unrestricted local execution because the Windows sandbox could not access restricted temporary-directory permissions.
+
+Fresh environment installation, the original historical scored MRI checkpoint, independent patient identity, real-MRI inference, and hidden-test runtime were not verified. The only real-MRI metric in the README is explicitly attributed to a historical user-pasted console log.
