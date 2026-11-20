@@ -12,3 +12,8 @@ Executed on the prepared source with the existing Windows Python 3.12 RSNA envir
 A first test attempt exposed a missing temporary-output parent and unavailable local asset assumptions. The output parent was created, optional bundle tests now explicitly skip without their inputs, and the no-partial-label preservation check now uses synthetic fixtures. The successful rerun used unrestricted local execution because the Windows sandbox could not access restricted temporary-directory permissions.
 
 Fresh environment installation, the original historical scored MRI checkpoint, independent patient identity, real-MRI inference, and hidden-test runtime were not verified. The only real-MRI metric in the README is explicitly attributed to a historical user-pasted console log.
+
+
+## Documentation review: 2026-11-20
+
+Reviewed the published source, dependency declarations, Git history, and saved evidence against the README. Checked Markdown fences, relative links, screenshot paths where applicable, and whitespace. The update changes documentation only; runtime source, notebooks, configurations, scores, and evidence files are preserved. No dependency installation, model/data download, training, or held-out evaluation was performed. Historical execution results above were not rerun.

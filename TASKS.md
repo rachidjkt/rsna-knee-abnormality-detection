@@ -4,4 +4,4 @@
 - Establish reliable patient grouping and an independent prespecified evaluation.
 - Review rights/attribution before separately publishing later borrowed ensemble workflows.
 
-Private repository creation and normal upload were completed on 2026-11-16. No competition data, identifiers, reports, or model weights were included.
+Historical publication: private repository creation and normal upload were completed on 2026-11-16. Public visibility was confirmed on 2026-11-20; no visibility change was made during documentation polish. No competition data, identifiers, reports, or model weights were included.

@@ -9,6 +9,6 @@ Keep synthetic metrics clearly separate from medical and competition performance
 Do not download model weights during submission inference. Record external weight provenance and eligibility.
 Run pytest and the synthetic smoke workflow after material pipeline changes.
 Regenerate notebooks with scripts/build_notebooks.py after source changes; notebooks embed the source for offline execution.
-Keep PROGRESS.md, TASKS.md, and RESUME.md current. No remote push or billable services.
+Keep PROGRESS.md, TASKS.md, and RESUME.md current. No billable services. Remote publication requires explicit user authorization.
 
-The current user request explicitly authorizes private publication of this portfolio edition to rachidjkt after content review. That authorization supersedes the historical no-remote-push instruction for this repository only. Verify owner, private visibility, and remote head; never force-push.
+The November 16 request authorized the initial private publication. The November 20 request authorizes documentation and metadata updates to this now-public repository. Verify owner rachidjkt and the current remote head; preserve public visibility and Git history, and never force-push. Do not change application code, evaluation settings, or saved scores for documentation work.

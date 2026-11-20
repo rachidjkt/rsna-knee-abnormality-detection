@@ -1,3 +1,5 @@
-﻿# Resume
+# Repository scope
 
-Start with README.md and VERIFICATION.md. This is the baseline portfolio edition; later research remains in the original local workspace. The user authorized private publication to rachidjkt. Do not publish datasets, report text, identifiers, weights, or the original research directory. Never force-push or change unrelated repositories.
+Start with [README.md](README.md) and [VERIFICATION.md](VERIFICATION.md). This public repository contains the baseline and synthetic engineering checks. Historical real-MRI evidence has the narrower scope recorded in the README; later ensemble work is excluded. Do not attach unrelated scores or synthetic results to real-MRI performance.
+
+See [ATTRIBUTION.md](ATTRIBUTION.md) for dependency sources and the pre-import provenance/license decision.
